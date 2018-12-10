@@ -10,7 +10,7 @@
     </head>
     <body>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
-        <script>
+        <script type="text/javascript>
             var scene = new THREE.Scene();
             var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1,1000 );
 
@@ -68,7 +68,7 @@
 
                 var delta_time = clock.getDelta();
                 mesh.rotation.x += 0.1 * delta_time;
-                mesh.rotation.y += 0,3 * delta.time;
+                mesh.rotation.y += 0,3 * delta_time;
 
                 renderer.render(scene, camera);
             };
