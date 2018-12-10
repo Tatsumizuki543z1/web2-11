@@ -31,7 +31,7 @@
             scene.add(new THREE.AmbientLight(0x666666));
 
             var loader = THREE.TextureLoader();
-            var geometry = new THREE.sphereGeometry( 1, 32, 16);
+            var geometry = new THREE.SphereGeometry( 1, 32, 16);
             var material = new THREE.MeshStandardMaterial({color: 0xccffcc,map: loader.load('earth.jpg')});
             var mesh = new THREE.Mesh( geometry, material);
             scene.add(mesh);
@@ -50,6 +50,7 @@
             var particle_material = new THREE.PointsMaterial({
                 size: 0.01,
                 color: 0x80ffccaa,
+                blending: THREE.AdditiveBlendiong,
                 transparent: true,
                 depthTest: true
             });
