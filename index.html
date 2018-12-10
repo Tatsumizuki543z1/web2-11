@@ -50,7 +50,7 @@
             var particle_material = new THREE.PointsMaterial({
                 size: 0.01,
                 color: 0x80ffccaa,
-                blending: THREE.AdditiveBlendiong,
+                blending: THREE.AdditiveBlending,
                 transparent: true,
                 depthTest: true
             });
@@ -67,7 +67,6 @@
                 requestAnimationFrame(render);
 
                 var delta_time = clock.getDelta();
-                mesh.rotation.x += 0.1 * delta_time;
                 mesh.rotation.y += 0.3 * delta_time;
 
                 renderer.render(scene, camera);
